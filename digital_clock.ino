@@ -13,7 +13,9 @@ void setup() {
   u8g2.setFont(u8g2_font_8x13_tf); // Set font to bold
 
   clock.begin();
-  // clock.setDateTime(__DATE__, __TIME__);
+
+  // Uncomment below line to set system date and time
+  clock.setDateTime(__DATE__, __TIME__);
 
   u8g2.setCursor(15, 40);
   u8g2.print("Hello Rahul");
@@ -65,19 +67,19 @@ void loop() {
 String getWeekdayName(uint8_t weekday) {
   switch (weekday) {
     case 1:
-      return "SUN";
-    case 2:
       return "MON";
-    case 3:
+    case 2:
       return "TUE";
-    case 4:
+    case 3:
       return "WED";
-    case 5:
+    case 4:
       return "THU";
-    case 6:
+    case 5:
       return "FRI";
-    case 7:
+    case 6:
       return "SAT";
+    case 7:
+      return "SUN";
     default:
       return "Unknown";
   }
